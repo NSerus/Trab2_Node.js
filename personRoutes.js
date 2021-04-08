@@ -16,16 +16,15 @@ var personController = require('./personController');
 router.route('/novos').post(personController.add)
                     .get(personController.novos);
    
-/*router.route('/intern').get(personController.inter);
+router.route('/intern').get(personController.inter);
 
-router.route('/+novos').get(personController.max);
+router.route('/max-novos').get(personController.max);
 
-router.route('/-novos').get(personController.min);
+router.route('/min-novos').get(personController.min);
 
 router.route('/med_novos').get(personController.med);
 
-router.route('/tot_novos').get(personController.tot);*/
-
+router.route('/tot_novos').get(personController.tot);
 
 //Export API routes
 module.exports = router;

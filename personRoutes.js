@@ -14,14 +14,18 @@ var personController = require('./personController');
 
 // Bio routes
 router.route('/novos').post(personController.add)
-                    .get(personController.index);
-    
+                    .get(personController.novos);
+   
+/*router.route('/intern').get(personController.inter);
 
-router.route('/person/:person_id')
-    .get(personController.view)
-    .patch(personController.update)
-    .put(personController.update)
-    .delete(personController.delete);
+router.route('/+novos').get(personController.max);
+
+router.route('/-novos').get(personController.min);
+
+router.route('/med_novos').get(personController.med);
+
+router.route('/tot_novos').get(personController.tot);*/
+
 
 //Export API routes
 module.exports = router;

@@ -2,17 +2,22 @@
 Person = require('./personModel');
 
 //Para index
-exports.index = function (req, res) {
+exports.novos = function (req, res) {
+    var casos = [];
     Person.get(function (err, person) {
+        
         if (err)
             res.json({
                 status: "error",
                 message: err
             });
+        for(var i=0;i<person.length;i++){
+            casos.push(person[i].casos_novos);
+        }
         res.json({
             status: "OK",
             message: "Obtidas Persons com Sucesso",
-            data: person 
+            novos_casos: casos
         });
     });
 };
@@ -44,42 +49,6 @@ exports.view = function (req, res) {
         res.json({
             message: 'Detalhes da Person',
             data: person
-        });
-    });
-};
-
-// Atualizar Person
-exports.update = function (req, res) {
-    Person.findById(req.params.person_id, function (err, person) {
-        if (err)
-            res.send(err);
-            person.nome = req.body.nome ? req.body.nome : person.nome;
-            person.email = req.body.email;
-            person.telef = req.body.telef;
-            person.morada = req.body.morada;
-
-        //Guardar e verificar erros
-        person.save(function (err) {
-            if (err)
-                res.json(err)
-            res.json({
-                message: "Person Updated Successfully",
-                data: person
-            });
-        });
-    });
-};
-
-// Apagar Person
-exports.delete = function (req, res) {
-    Person.deleteOne({
-        _id: req.params.person_id
-    }, function (err, contact) {
-        if (err)
-            res.send(err)
-        res.json({
-            status: "OK",
-            message: 'Person Eliminada!'
         });
     });
 };

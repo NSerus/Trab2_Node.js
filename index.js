@@ -6,7 +6,7 @@ let mongoose = require('mongoose');
 let app = express();
 
 //Import routes
-let apiRoutes = require("./personRoutes")
+let apiRoutes = require("./covidRoutes")
 
 //configurar bodyparser para processar pedidos
 app.use(bodyParser.urlencoded({

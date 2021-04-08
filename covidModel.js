@@ -16,7 +16,7 @@ var covidSchema = mongoose.Schema({
     }
 });
 
-// Export Person Model
+// Export Covid Model
 var Covid = module.exports = mongoose.model('covid', covidSchema);
 
 module.exports.get = function (callback, limit) {

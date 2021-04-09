@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "606dc8a90c504f0212b717db"
+  },
+  "data": "29-03-2021",
+  "casos_novos": 309,
+  "casos_internados": 136
+},{
+  "_id": {
+    "$oid": "606dc8a90c504f0212b717dc"
+  },
+  "data": "30-03-2021",
+  "casos_novos": 389,
+  "casos_internados": 129
+},{
+  "_id": {
+    "$oid": "606dc8a90c504f0212b717dd"
+  },
+  "data": "31-03-2021",
+  "casos_novos": 617,
+  "casos_internados": 127
+},{
+  "_id": {
+    "$oid": "606dc8a90c504f0212b717de"
+  },
+  "data": "01-04-2021",
+  "casos_novos": 592,
+  "casos_internados": 129
+},{
+  "_id": {
+    "$oid": "606dc8a90c504f0212b717df"
+  },
+  "data": "02-04-2021",
+  "casos_novos": 548,
+  "casos_internados": 131
+},{
+  "_id": {
+    "$oid": "606dc8a90c504f0212b717e0"
+  },
+  "data": "03-04-2021",
+  "casos_novos": 280,
+  "casos_internados": 126
+}]
